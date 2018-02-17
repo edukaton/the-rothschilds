@@ -1,0 +1,6 @@
+export { default as AutoComplete } from './AutoComplete'
+export { default as ObjectComponent } from './ObjectComponent'
+export { default as SelectComponent } from './SelectComponent'
+export { default as SliderComponent } from './SliderComponent'
+export { default as SwitchComponent } from './SwitchComponent'
+export { default as TextComponent } from './TextComponent'

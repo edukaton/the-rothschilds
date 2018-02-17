@@ -1,0 +1,8 @@
+@import '../../../node_modules/css-reset/reset.css';
+@import '../../../node_modules/typeface-roboto/index.css';
+@import '../../../assets/css/normalize.css';
+
+// for font rem to calculate properly
+html {
+  font-size: 16px;
+}
