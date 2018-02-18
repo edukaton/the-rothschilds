@@ -1,0 +1,255 @@
+{
+ "questions": [
+    {
+      "id": "smartfon",
+      "text": "Czy masz smartfona?",
+      "answers": [
+        "Tak",
+        "Nie"
+      ]
+    },
+    {
+      "id": "potrawa",
+      "text": "Na którą z potraw masz obecnie większą ochotę?",
+      "answers": [
+        "na schabowego",
+        "na pizzę"
+      ]
+    },
+    {
+      "id": "mama",
+      "text": "Obieca{łeś/łaś} mamie, że pomożesz jej w porządkach. Ale nagle dzwoni twój najlepszy przyjaciel/przyjaciółka. Właśnie rozstał/a się z dziewczyną/chłopakiem i prosi, żebyś natychmiast przyjecha{ł/ła}. Co robisz?",
+      "answers": [
+        "Jadę do przyjaciela/przyjaciółki",
+        "Zostaję w domu i pomagam mamie"
+      ]
+    },
+    {
+      "id": "muzyka",
+      "text": "Jedziesz w długą podróż i możesz słuchać tylko jednej z playlist. Jaką playlistę wybierasz",
+      "answers": [
+        "z rapem",
+        "z rockiem",
+        "z muzyką elektroniczną",
+        "z popem"
+      ]
+    },
+    {
+      "id": "filmy",
+      "text": "Jakie filmy oglądasz najchętniej?",
+      "answers": [
+        "westerny",
+        "przygodowe",
+        "dokumenalne",
+        "akcji"
+      ]
+    },
+    {
+      "id": "najwazniejsze",
+      "text": "Co jest dla Ciebie najważniejsze?",
+      "answers": [
+        "Przyjaciele. Choć czasem mam ich dość, nie wyobrażam sobie życia bez nich.",
+        "Moje pasje. Kiedy coś naprawdę mnie wciągnie, zarywam noce, zapominam, że trzeba jeść i się myć.",
+        "Nauka i przyszła kariera. Za wszelką cenę chcę osiągnąć sukces - choć oczywiście nie kosztem innych.",
+        "Miłość. Życie nie ma sensu, jeśli nie dzielimy go z ukochaną osobą."
+      ]
+    }
+  ],
+  "explanations": [
+    {
+      "id": "odpowiedzialnosc-zbiorowa",
+      "title": "Odpowiedzialność zbiorowa",
+      "text": "Manipulacja polega na zestawieniu Ciebie z emocjonalnie nacechowaną grupą, jaką są przestępcy. Na bazie odpowiedzialności zbiorowej, z automatu stajesz się ofiarą moralnych ocen, które przypisywane są członkom tej grupy. Tę formę manipulacji nazywamy transferem skojarzeń albo odpowiedzialnością zbiorową."
+    },
+    {
+      "id": "czarno-biale-myslenie",
+      "title": "Czarno białe myślenie",
+      "text": "W przykładzie postawiliśmy Cię przed koniecznością wyboru pomiędzy dwoma możliwościami. Jak widzisz, odnieśliśmy się tylko do jednej z nich i przeinaczyliśmy jej sens. Ten rodzaj zabiegu nazywa się fałszywą dychotomią albo czarno-białym myśleniem."
+    },
+    {
+      "id": "rownia-pochyla",
+      "title": "Równia pochyła",
+      "text": "Oprócz tego, zastosowaliśmy równię pochyłą, czyli chwyt w którym wychodzimy od mało znaczącej informacji (lubiana potrawa), rozwijając przesadną argumentację, opartą na skojarzeniu (nienawiść do narodu)."
+    },
+    {
+      "id": "ramowanie",
+      "title": "Ramowanie",
+      "text": "W momencie, gdy pomagasz jednej osobie, nie możesz pomóc drugiej. Manipulacja polega więc na dobraniu odpowiedniej ramy do interpretacji Twojego zachowania - przemilczeniu pomocy, a podkreśleniu nieudzielenia pomocy. Nazywamy to ramowaniem (ang. framing)."
+    },
+    {
+      "id": "falszywy-ekspert",
+      "title": "Fałszywy ekspert",
+      "text": "Jesteśmy bardzo podatni na działanie autorytetów. Słowa specjalistów mają dla nas wielkie znaczenie, jednak w tym przypadku ordynarnie je zmyśliliśmy. Ten rodzaj manipulacji nazywamy powołaniem się na fałszywego eksperta."
+    },
+    {
+      "id": "krzywdzace-porownanie",
+      "title": "Krzywdzące porównanie",
+      "text": "Zestawienie Cię z osobą o złej reputacji wywołuje na ludziach wrażenie, że nie możesz mieć racji. Co więcej, broniąc w rozmowie swojego stanowiska, automatycznie bronisz poczynań osoby, do której Cię porównano."
+    },
+    {
+      "id": "kontekst",
+      "title": "Kontekst",
+      "text": "Wyjęliśmy Twoje słowa z kontekstu, zmieniając całkowicie znaczenie wypowiedzi. W taki sposób dziennikarze mogą zmanipulować wypowiedzi rozmówców."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "header",
+      "text": "{name} to prawdziwy zwyrodnialec. Zobaczcie co ukrywa przed światem."
+    },
+    {
+      "type": "paragraph",
+      "text": "{name} przez lata ukrywał przed światem swoją mroczną stronę. Naszym dziennikarzom udało się jednak dotrzeć do całej prawdy o {nim/niej}."
+    },
+    {
+      "type": "paragraph",
+      "text": "{name}, podobnie jak większość przestępców, jest posiada{czem/czką} smartfona. Przypadek?",
+      "conditions": {
+        "smartfon": 0
+      },
+      "explanation": "odpowiedzialnosc-zbiorowa"
+    },
+    {
+      "type": "paragraph",
+      "text": "{name}, podobnie jak większość przestępców odbywających wyrok, nie jest posiada{czem/czką} smartfona. Przypadek?",
+      "conditions": {
+        "smartfon": 1
+      },
+      "explanation": "odpowiedzialnosc-zbiorowa"
+    },
+    {
+      "type": "paragraph",
+      "text": "Może uwierzylibyśmy, że to zwykły zbieg okoliczności, gdyby nie inne fakty, choćby {jego/jej} preferencje kulinarne. {name} prezentuje silne przywiązanie do polskiej kuchni. Otwarcie gardzi pizzą. Czy to skutek jego ksenofobii? Czy taki sam stosunek ma do reszty dziedzictwa europejskiego? Takie postawy nie powinny być tolerowane – nie po to przecież walczyliśmy przez lata, żeby być częścią Europy.",
+      "conditions": {
+        "potrawa": 0
+      },
+      "explanation": [
+        "czarno-biale-myslenie",
+        "rownia-pochyla"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Może uwierzylibyśmy, że to zwykły zbieg okoliczności, gdyby nie inne fakty, choćby {jego/jej} preferencje kulinarne. {name} brzydzi się rdzennie polskim schabowym z ziemniakami. Chętniej zjadłby pizzę. Można przypuszczać, że tak samo wstydzi się reszty polskiej kultury. Dlaczego {name} tak nienawidzi polskości? Na to pytanie niestety nie znamy odpowiedzi.",
+      "conditions": {
+        "potrawa": 1
+      },
+      "explanation": [
+        "czarno-biale-myslenie",
+        "rownia-pochyla"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Przyjrzyjmy się {jego/jej} relacjom z bliskimi. {name} wydaje się być {kochającym synem/kochającą córką}, ale to tylko pozory. W rozmowie z nami otwarcie przyznaje, że {byłby/byłaby} {gotów/gotowa} złamać dane własnej matce słowo.",
+      "conditions": {
+        "mama": 0
+      },
+      "explanation": "ramowanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Przyjrzyjmy się {jego/jej} relacjom z bliskimi. {name} wydaje się być {oddanym przyjacielem/oddaną przyjaciółką}, ale to tylko pozory. W rozmowie z nami wprost przyznaje, że {byłby/byłaby} gotowa zostawić przyjaciela w potrzebie.",
+      "conditions": {
+        "mama": 1
+      },
+      "explanation": "ramowanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Co więcej, {name} słucha rapu. “Wielu raperów pochodzi z biednych rodzin, środowisk przestępczych” - tłumaczy prof. Mariusz Świętochowski, psycholog więzienny. Powstaje zasadne pytanie – czy dalibyście takiej osobie pod opiekę swoje dziecko?",
+      "conditions": {
+        "muzyka": 0
+      },
+      "explanation": "falszywy-ekspert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Co więcej, {name} słucha rocka. “Jak to mawiają - sex, drugs and rock’n’roll” – mówi dr Artur Żaczek, terapeuta uzależnień “wielu moich pacjentów zaczęło swoją przygodę z narkotykami właśnie podczas koncertów rockowych”. Jeśli {jej/jego} idole jawnie popierają branie narkotyków, to w jakim stanie może być teraz {name}? Na to pytanie każdy musi odpowiedzieć sobie sam.",
+      "conditions": {
+        "muzyka": 1
+      },
+      "explanation": "falszywy-ekspert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Co więcej, {name} słucha muzyki elektronicznej. “To może dużo powiedzieć o człowieku” – tłumaczy podp. Kamil Kiliński, policjant warszawskiego wydziału antynarkotykowego – “często interweniujemy właśnie podczas masowych imprez z muzyką elektroniczną, które słyną z dużej ilości używek i łamania przepisów prawa.” Pozostaje pytanie: czy takiej osobie można zaufać?",
+      "conditions": {
+        "muzyka": 2
+      },
+      "explanation": "falszywy-ekspert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Co więcej, {name} słucha popu, to typowe dla ludzi płynących z prądem, o niezbyt wyrafinowanym guście. “Osoby słuchające tego typu muzyki często charakteryzują się niskim ilorazem inteligencji” – mówi w rozmowie z nami prof. Wiesław Andrusiewicz, psycholog z Uniwersytetu Warszawskiego.",
+      "conditions": {
+        "muzyka": 3
+      },
+      "explanation": "falszywy-ekspert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wiele o {nim/niej} mówią też {jego/jej} ulubione filmy. Podobnie jak Lavrentyi Beria, prawa ręka Józefa Stalina, jest wielkim miłośnikiem westernów.",
+      "conditions": {
+        "filmy": 0
+      },
+      "explanation": "krzywdzace-porownanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wiele o {nim/niej} mówią też {jego/jej} ulubione filmy. Lubi filmy przygodowe, które – jak wiemy z przekazów historycznych – były ulubionym nurt Josefa Goebellsa i innych wysokich oficjeli III Rzeszy.",
+      "conditions": {
+        "filmy": 1
+      },
+      "explanation": "krzywdzace-porownanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wiele o {nim/niej} mówią też {jego/jej} ulubione filmy. Fascynację kinematografią dokumentalną dzieli z takimi „zasłużonymi” postaciami komunistycznych rewolucji jak Pol Pot czy Kim Dzong Un.",
+      "conditions": {
+        "filmy": 2
+      },
+      "explanation": "krzywdzace-porownanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wiele o {nim/niej} mówią też {jego/jej} ulubione filmy. Filmy akcji wymienia, jako jeden z ulubionych gatunków filmowych stawiając się w nieco „oryginalnym” towarzystwie Saddama Hussaina.",
+      "conditions": {
+        "filmy": 3
+      },
+      "explanation": "krzywdzace-porownanie"
+    },
+    {
+      "type": "paragraph",
+      "text": "{name} w rozmowie z naszym dziennikarzem nie przebiera w słowach. “Mam ich dość” - mówi bezwzględnie {name} o swoich przyjaciołach.",
+      "conditions": {
+        "najwazniejsze": 0
+      },
+      "explanation": "kontekst"
+    },
+    {
+      "type": "paragraph",
+      "text": "{name} w rozmowie z naszym dziennikarzem nie przebiera w słowach. O poziomie higieny, jaki prezentuje {name} niech świadczą {jego/jej} własna wypowiedź: “Zarywam noce, zapominam, że (...) trzeba się myć”.",
+      "conditions": {
+        "najwazniejsze": 1
+      },
+      "explanation": "kontekst"
+    },
+    {
+      "type": "paragraph",
+      "text": "{name} w rozmowie z naszym dziennikarzem nie przebiera w słowach. {name} to {bezwzględny karierowicz/ bezwzględna karierowiczka}. “Za wszelką cenę chcę osiągnąć sukces” - mówi nam. Innymi słowy - po trupach do celu.",
+      "conditions": {
+        "najwazniejsze": 2
+      },
+      "explanation": "kontekst"
+    },
+    {
+      "type": "paragraph",
+      "text": "{name} w rozmowie z naszym dziennikarzem nie przebiera w słowach. “Życie nie ma sensu” - przyznaje {name} nihilistycznie. Pewnie wydaje {mu/jej} się, że takimi “głębokimi” uwagami komuś zaimponuje.",
+      "conditions": {
+        "najwazniejsze": 3
+      },
+      "explanation": "kontekst"
+    }
+  ]
+}

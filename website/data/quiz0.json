@@ -1,0 +1,44 @@
+{
+  "questions": [{
+    "id": "zwierzeta",
+    "text": "Lubisz psy, czy koty?",
+    "answers": ["Psy", "Koty"]
+  }],
+
+  "blocks": [{
+    "type": "header",
+    "text": "Twój stosunek do zwierząt"
+  }, {
+    "type": "paragraph",
+    "text": "{name} nie lubi kotów! za kogo {on/ona} się uwaza?",
+    "conditions": {
+      "zwierzeta": 0
+    },
+    "explanation": "zaprzeczenie"
+  }, {
+    "type": "paragraph",
+    "text": "{name} nie lubi psów! Za kogo {on/ona} się uwaza?",
+    "conditions": {
+      "zwierzeta": 1
+    },
+    "explanation": ["zaprzeczenie", "zaprzeczenie"]
+  }, {
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1423958950820-4f2f1f44e075",
+    "conditions": {
+      "zwierzeta": 1
+    }
+  }, {
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1516470544373-df3edeb89d80",
+    "conditions": {
+      "zwierzeta": 0
+    }
+  }],
+
+  "explanations": [{
+    "id": "zaprzeczenie",
+    "title": "So you are saying, that...",
+    "text": "Podjęcie wyboru, nie oznacza automatycznie negacji pozostałych opcji"
+  }]
+}
