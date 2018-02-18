@@ -22,6 +22,14 @@ const theme = {
   spacing: {
     unit: 5,
   },
+  palette: {
+    primary: {
+      main: '#4caf50',
+    },
+    secondary: {
+      main: '#ffca28',
+    },
+  },
 }
 
 export default class Root extends React.Component {
