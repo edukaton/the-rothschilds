@@ -7,18 +7,18 @@ import TextField from 'material-ui/TextField'
 import Typography from 'material-ui/Typography'
 import { MenuItem, MenuList } from 'material-ui/Menu';
 
-@inject('infoStore')
+@inject('quizStore')
 @observer
 export default class Question extends React.Component {
   render() {
     const { question, onAnswer } = this.props
-    const sex = this.props.infoStore.sex
+    const sex = this.props.quizStore.sex
     const reg = /{[^\/]*\/[^}]*}/gi
     if (question.text) {
       const matches = question.text.match(reg)
       _.forEach(matches, (match) => {
         const middle = match.indexOf('/')
-        const version = this.props.infoStore.sex === 'M'
+        const version = this.props.quizStore.sex === 'M'
           ? match.substring(1, middle)
           : match.substring(middle + 1, match.length - 1)
         question.text = question.text.replace(match, version)

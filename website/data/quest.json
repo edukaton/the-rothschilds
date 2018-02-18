@@ -1,0 +1,82 @@
+[
+    {
+        "type": "you",
+        "text": "Wiesz co? Chyba przejdę na wegetarianizm"
+    },{
+        "type": "they",
+        "text": "No chyba żartujesz"
+    },{
+        "type": "you",
+        "text": "Ale w czym problem?"
+    },{
+        "type": "they",
+        "text": "Widziałem taki film na yt"
+    },{
+        "type": "they",
+        "text": "Typ mówił, że jak przestaniesz jeść mięso, to po miesiącu wypadają ci zęby"
+    },{
+        "type": "choice",
+        "options": ["popularnosc", "autorytet", "falszywa_dychotomia"],
+        "answer": 0
+    },
+
+
+    {
+        "type": "you",
+        "text": "Serio? Jakiś random z yt?"
+    },{
+        "type": "you",
+        "text": "On w ogóle jest lekarzem? Albo dietetykiem?"
+    },{
+        "type": "they",
+        "text": "Dobra, ale nie tylko o to chodzi"
+    },{
+        "type": "they",
+        "text": "Wiesz, jacy są wegetarianie"
+    },{
+        "type": "they",
+        "text": "To jacyś lewacy, ekoterroryści"
+    },{
+        "type": "they",
+        "text": "Chcesz taki być?"
+    },{
+        "type": "choice",
+        "options": ["tradycja", "ad_personam", "transfer"],
+        "answer": 2
+    },
+
+
+    {
+        "type": "you",
+        "text": "Są różni wegetarianie"
+    },{
+        "type": "you",
+        "text": "Np. Ariana Grande nie je mięsa. Ona też jest ekoterrorystką?"
+    },{
+        "type": "they",
+        "text": "Ale wiesz, jak teraz będzie"
+    },{
+        "type": "they",
+        "text": "Najpierw sam zostaniesz wegetarianinem"
+    },{
+        "type": "they",
+        "text": "Potem będziesz nawracać innych"
+    },{
+        "type": "they",
+        "text": "A w końcu przestaniesz gadać z ludźmi, którzy jedzą mięso"
+    },{
+        "type": "choice",
+        "options": ["rownia_pochyla", "atakowanie_chochola", "anegdota"],
+        "answer": 0
+    },
+
+    {"type": "you",
+        "text": "Z mięsożercami mogę gadać"
+    },{
+        "type": "you",
+        "text": "Ale tylu błędów w argumentacji nie zniosę"
+    },{
+        "type": "you",
+        "text": "Lecę, cześć"
+    }
+]

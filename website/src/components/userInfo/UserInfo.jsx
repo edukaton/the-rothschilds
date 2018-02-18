@@ -37,13 +37,13 @@ formField: {
   display: 'flex',
 },
 }))
-@inject('infoStore')
+@inject('quizStore')
 @observer
 export default class UserInfo extends React.Component {
   isInfoValid = () => {
-    if (_.isEmpty(this.props.infoStore.name))
+    if (_.isEmpty(this.props.quizStore.name))
       return false
-    else if (_.isEmpty(this.props.infoStore.sex))
+    else if (_.isEmpty(this.props.quizStore.sex))
       return false
     else
       return true
@@ -70,15 +70,15 @@ export default class UserInfo extends React.Component {
             required
             id="name"
             label="Imię"
-            value={this.props.infoStore.name}
-            onChange={event => this.props.infoStore.setName(event.target.value)}
+            value={this.props.quizStore.name}
+            onChange={event => this.props.quizStore.setName(event.target.value)}
             margin="normal"
           />
           <FormControl required className={classes.formField}>
             <InputLabel htmlFor="sex">Płeć</InputLabel>
             <Select
-              value={this.props.infoStore.sex}
-              onChange={(event) => this.props.infoStore.setSex(event.target.value)}
+              value={this.props.quizStore.sex}
+              onChange={(event) => this.props.quizStore.setSex(event.target.value)}
               inputProps={{ name: 'sex', id: 'sex' }}
             >
               <MenuItem value="K">Kobieta</MenuItem>

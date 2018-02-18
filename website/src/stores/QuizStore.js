@@ -12,7 +12,7 @@ const DEFAULT_VALUES = {
   answers: {},
 }
 
-class InfoStore {
+class QuizStore {
   // observable generator does not initialize observable props so we use extendObservable instead
   constructor() {
     extendObservable(this, _.assign(DEFAULT_VALUES, quiz))
@@ -32,4 +32,4 @@ class InfoStore {
   }
 }
 
-export default new InfoStore()
+export default new QuizStore()

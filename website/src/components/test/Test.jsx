@@ -18,7 +18,7 @@ root: {
   padding: 25,
 },
 }))
-@inject('infoStore')
+@inject('quizStore')
 @observer
 export default class Test extends React.Component {
   state = {
@@ -26,24 +26,24 @@ export default class Test extends React.Component {
   }
 
   isInfoValid = () => {
-    if (_.isEmpty(this.props.infoStore.name))
+    if (_.isEmpty(this.props.quizStore.name))
       return false
     else
       return true
   }
 
   handleAnswer = (index) => {
-    const question = this.props.infoStore.questions[this.state.activeQuestion]
-    this.props.infoStore.addAnswer(question.id, index)
+    const question = this.props.quizStore.questions[this.state.activeQuestion]
+    this.props.quizStore.addAnswer(question.id, index)
 
-    if (this.props.infoStore.questions.length === this.state.activeQuestion + 1)
+    if (this.props.quizStore.questions.length === this.state.activeQuestion + 1)
       this.props.onDone()
     else
       this.setState({ activeQuestion: this.state.activeQuestion + 1 })
   }
   render() {
     const { classes } = this.props
-    const question = this.props.infoStore.questions[this.state.activeQuestion]
+    const question = this.props.quizStore.questions[this.state.activeQuestion]
 
     return (
       <Paper className={classes.root}>

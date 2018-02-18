@@ -1,5 +1,6 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
+import { withRouter } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Button from 'material-ui/Button'
@@ -16,33 +17,41 @@ import Sources from './Sources'
     textAlign: 'center',
   },
 }))
+@withRouter
 export default class Home extends React.Component {
-  state = {
-    activeView: 0,
-  }
-
-  handleChange = (event, value) => {
-    this.setState({ activeView: value });
-  };
-
   render() {
-    const { classes } = this.props;
-    const { activeView } = this.state;
+    const { classes, location } = this.props;
+    let View = null
+    let activeView = null
+    switch (location.hash) {
+    case '#quiz':
+      View = Quiz
+      activeView = 1
+      break;
+    case '#quests':
+      View = Quests
+      activeView = 2
+      break;
+    case '#sources':
+      View = Sources
+      activeView = 3
+      break;
+    default:
+      activeView = 0
+      View = About
+    }
 
     return (
       <div className={classes.root}>
         <AppBar position="static">
-          <Tabs value={activeView} onChange={this.handleChange}>
+          <Tabs value={activeView}>
             <Tab label="O Projekcie" href="#about" />
             <Tab label="Quiz" href="#quiz" />
             <Tab label="Wyzwania" href="#quests" />
             <Tab label="Źródła i pomoce" href="#sources" />
           </Tabs>
         </AppBar>
-        {activeView === 0 && <About />}
-        {activeView === 1 && <Quiz />}
-        {activeView === 2 && <Quests />}
-        {activeView === 3 && <Sources />}
+        <View />
       </div>
     );
   }

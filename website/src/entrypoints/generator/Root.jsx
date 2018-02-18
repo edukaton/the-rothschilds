@@ -7,7 +7,8 @@ import MuiThemeProviderNext from 'material-ui/styles/MuiThemeProvider'
 import createMuiTheme from 'material-ui/styles/createMuiTheme'
 
 
-import infoStore from '../../stores/InfoStore'
+import quizStore from '../../stores/QuizStore'
+import questStore from '../../stores/QuestStore'
 
 const theme = {
   zIndex: {
@@ -37,7 +38,7 @@ export default class Root extends React.Component {
     return (
 
       <MuiThemeProviderNext theme={createMuiTheme(theme)}>
-        <Provider infoStore={infoStore} >
+        <Provider quizStore={quizStore} questStore={questStore} >
           <Router>
             {this.props.routes()}
           </Router>

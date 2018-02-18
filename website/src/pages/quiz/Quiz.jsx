@@ -1,5 +1,7 @@
 import React from 'react'
+import cnames from 'classnames'
 import { withStyles } from 'material-ui/styles'
+import { withRouter } from 'react-router-dom'
 import Stepper, { Step, StepLabel } from 'material-ui/Stepper'
 import Button from 'material-ui/Button'
 import Paper from 'material-ui/Paper'
@@ -22,13 +24,20 @@ const getSteps = () => {
     marginTop: theme.spacing.unit,
     marginRight: theme.spacing.unit,
   },
+  buttonRight: {
+    marginLeft: 'auto',
+  },
   actionsContainer: {
     marginBottom: theme.spacing.unit * 2,
   },
   resetContainer: {
     padding: theme.spacing.unit * 3,
   },
+  btnContainer: {
+    float: 'right',
+  }
 }))
+@withRouter
 export default class Home extends React.Component {
   state = {
     activeStep: 0,
@@ -42,6 +51,9 @@ export default class Home extends React.Component {
   }
   handleReset = () => {
     this.setState({ activeStep: 0 })
+  }
+  handleExit = () => {
+    this.props.history.push('/')
   }
 
   renderStepComponent = () => {
@@ -76,7 +88,10 @@ export default class Home extends React.Component {
             );
           })}
         </Stepper>
-        <Button onClick={this.handleReset} className={classes.button}>Reset</Button>
+        <div className={classes.btnContainer}>
+          <Button onClick={this.handleReset} className={cnames(classes.buttonRight, classes.button)}>Resetuj</Button>
+          <Button onClick={this.handleExit} className={cnames(classes.buttonRight, classes.button)}>Wyjdź</Button>
+        </div>
       </div>
     );
   }

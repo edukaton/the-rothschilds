@@ -95,11 +95,11 @@
   "blocks": [
     {
       "type": "header",
-      "text": "{name} to prawdziwy zwyrodnialec. Zobaczcie co ukrywa przed światem."
+      "text": "{name} to prawdziwy zwyrodnialec. Zobaczcie, co ukrywa przed światem."
     },
     {
       "type": "paragraph",
-      "text": "{name} przez lata ukrywał przed światem swoją mroczną stronę. Naszym dziennikarzom udało się jednak dotrzeć do całej prawdy o {nim/niej}."
+      "text": "{name} przez lata ukrywa{ł/ła} przed światem swoją mroczną stronę. Naszym dziennikarzom udało się jednak dotrzeć do całej prawdy o {nim/niej}."
     },
     {
       "type": "paragraph",
@@ -130,7 +130,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Może uwierzylibyśmy, że to zwykły zbieg okoliczności, gdyby nie inne fakty, choćby {jego/jej} preferencje kulinarne. {name} brzydzi się rdzennie polskim schabowym z ziemniakami. Chętniej zjadłby pizzę. Można przypuszczać, że tak samo wstydzi się reszty polskiej kultury. Dlaczego {name} tak nienawidzi polskości? Na to pytanie niestety nie znamy odpowiedzi.",
+      "text": "Może uwierzylibyśmy, że to zwykły zbieg okoliczności, gdyby nie inne fakty, choćby {jego/jej} preferencje kulinarne. {name} brzydzi się rdzennie polskim schabowym z ziemniakami. Chętniej zjad{łby/łaby} pizzę. Można przypuszczać, że tak samo wstydzi się reszty polskiej kultury. Dlaczego {name} tak nienawidzi polskości? Na to pytanie niestety nie znamy odpowiedzi.",
       "conditions": {
         "potrawa": 1
       },
